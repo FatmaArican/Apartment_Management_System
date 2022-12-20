@@ -1,13 +1,13 @@
 # Apartment Management System Introduction
 
 ## Tablo Tasarımı
-users : Bu tablo site sakinlerini ve site çalışanlarını tutan tablodur. Bu ayrımı "user_types" tablosuna göre yaparız. Basit olarak kullanıcı bilgilerini tutar.
+**users :** Bu tablo site sakinlerini ve site çalışanlarını tutan tablodur. Bu ayrımı "user_types" tablosuna göre yaparız. Basit olarak kullanıcı bilgilerini tutar.
 
-users_type: user tablosuna hizmet eder.
+**users_type :** user tablosuna hizmet eder.
 
-messages: Apartmanlar arası mesajlaşma sistemidir. Mesaj bilgileri "From" ve "To" apartman biçiminde yer almaktadır.
+**messages :** Apartmanlar arası mesajlaşma sistemidir. Mesaj bilgileri "From" ve "To" apartman biçiminde yer almaktadır.
 
-apartments : Apartman bilgileri dışında "apartment_type" bilgisi yer almaktadır. Apartman type içerisinde "site yönetim ofisi", "ticari amaçlı dükkan" ve "apartman" tipleri yer alır. 
+**apartments :** Apartman bilgileri dışında "apartment_type" bilgisi yer almaktadır. Apartman type içerisinde "site yönetim ofisi", "ticari amaçlı dükkan" ve "apartman" tipleri yer alır. 
 Bu tip içerisinde m2 ve ödemesi gereken aidat bilgileri gibi detay bilgiler de yer almaktadır.
 
 Örnek olarak;
@@ -58,15 +58,15 @@ Bu tip içerisinde m2 ve ödemesi gereken aidat bilgileri gibi detay bilgiler de
 
 
 
-Apartman içerisinde owner_user_id bilgisi yer almaktadır. Bu user içerisinde, Çalışan,site sakini olarak farklı tiplerde ayrıştırmalar vardır.
+**Apartman** içerisinde owner_user_id bilgisi yer almaktadır. Bu user içerisinde, Çalışan,site sakini olarak farklı türden ayrıştırmalar yer alır.
 
-apartments_type: Apartman tablosuna hizmet eder.
+**apartments_type :** Apartman tablosuna hizmet eder.
 
-payments: Bu tabloda ödenen veya ödenmesi gereken tutarlar yer alır. Ödeme durumu "state"(success,error,waiting) olarak belirtilir. payment_type_id değeri ile ödemenin hangi tipte olduğu spesifik olarak belirtilir. Örneğin "Aidat","genel giderler","asansör yenileme" vs. gibi sabitlenmiş isimlendirmelerin olduğu referans bilgisi yer alır. Ödenecek tutar "amount" değerinde yer alır. Eğer ödenecek tutar aidat bilgisi ise otomatik olarak bulunan apartmanın tipi üzerinden çekilir.
+**payments :** Bu tabloda ödenen veya ödenmesi gereken tutarlar yer alır. Ödeme durumu "state"(success,error,waiting) olarak belirtilir. payment_type_id değeri ile ödemenin hangi tipte olduğu spesifik olarak belirtilir. Örneğin "Aidat","genel giderler","asansör yenileme" vs. gibi sabitlenmiş isimlendirmelerin olduğu referans bilgisi yer alır. Ödenecek tutar "amount" değerinde yer alır. Eğer ödenecek tutar aidat bilgisi ise otomatik olarak bulunan apartmanın tipi üzerinden çekilir.
 
-payments_type : payment tablosuna hizmet eder.
+**payments_type :** payment tablosuna hizmet eder.
 
-Not : Veriler tablolardan silinmez, "deleted" olarak kaydı tutulur.
+**Not :** Veriler tablolardan silinmez, "deleted" olarak kaydı tutulur.
 
 
 ## Projede Kullanılan Paketler
@@ -78,11 +78,11 @@ AutoMapper
 
 ## Proje İlerleme Bilgileri
 
-Uygulama içerisinde veritabanı ile iletişimi dapper ile sağladım. Katmanlar arasında (Repository, Service ve Controller) verileri map ettim.
-Yalnızca veritabanı işlemlerini gerçekleştiren süreçleri "Repository" katmanında en sade biçimiyle konumlandırdım.
-İş akışı validasyonlarını gerçekleştirmek ve operasyonel olarak farklı repolara ihtiyac duyduğum yerleri birleştirmek için "Service" katmanını kullandım. 
-Bunun örneği "UserService" içerisinde "PayMineDue" methodunda görülebilir. 
-"Controller" katmanı ise gelen istekleri karşılamak ve ilgili servise aktarmak için kullandım.
+Uygulama içerisinde veritabanı ile iletişimi **dapper** ile sağladım. Katmanlar arasında (Repository, Service ve Controller) verileri map ettim.
+Yalnızca veritabanı işlemlerini gerçekleştiren süreçleri **"Repository"** katmanında en sade biçimiyle konumlandırdım.
+İş akışı validasyonlarını gerçekleştirmek ve operasyonel olarak farklı repolara ihtiyac duyduğum yerleri birleştirmek için **"Service"** katmanını kullandım. 
+Bunun örneği **"UserService"** içerisinde **"PayMineDue"** methodunda görülebilir. 
+**"Controller"** katmanı ise gelen istekleri karşılamak ve ilgili servise aktarmak için kullandım.
 
 
 
