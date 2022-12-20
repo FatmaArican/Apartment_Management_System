@@ -89,21 +89,21 @@ Bunun örneği "UserService" içerisinde "PayMineDue" methodunda görülebilir.
 ## Teknik curl Dökümantasyonları
 
 
-# Get Apartments Types 
+### Get Apartments Types 
 
 curl -X 'GET' \
   'https://localhost:7200/apartments/types' \
   -H 'accept: */*'
 
 
-# Get Apartments 
+### Get Apartments 
 
 curl -X 'GET' \
   'https://localhost:7200/apartments' \
   -H 'accept: */*'
 
 
-# Create Apartment
+### Create Apartment
 
 curl -X 'POST' \
   'https://localhost:7200/apartments' \
@@ -119,7 +119,7 @@ curl -X 'POST' \
 
 
 
-# Update Apartment
+### Update Apartment
 
 curl -X 'PUT' \
   'https://localhost:7200/apartments' \
@@ -133,20 +133,20 @@ curl -X 'PUT' \
 }'
 
 
-# Delete Apartment
+### Delete Apartment
 curl -X 'DELETE' \
   'https://localhost:7200/apartments/1' \
   -H 'accept: */*'
 
 
-# Get Messages
+### Get Messages
 
 curl -X 'GET' \
   'https://localhost:7200/messages/1?isRead=true' \
   -H 'accept: */*'   
 
 
-# Send Message to Site Manager
+### Send Message to Site Manager
 
 curl -X 'POST' \
   'https://localhost:7200/messages/to-manager' \
@@ -159,7 +159,7 @@ curl -X 'POST' \
 
 
 
-# Create User
+### Create User
 curl -X 'POST' \
   'https://localhost:7200/users' \
   -H 'accept: */*' \
@@ -174,7 +174,7 @@ curl -X 'POST' \
 }'
 
 
-# Update User
+### Update User
 curl -X 'PUST' \
   'https://localhost:7200/users' \
   -H 'accept: */*' \
@@ -189,7 +189,7 @@ curl -X 'PUST' \
 }'
 
 
-# Delete User
+### Delete User
 
 curl -X 'DELETE' \
   'https://localhost:7200/users/1' \
