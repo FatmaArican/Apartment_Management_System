@@ -16,10 +16,10 @@ Bu tip içerisinde m2 ve ödemesi gereken aidat bilgileri gibi detay bilgiler de
 <table border="2">
     <body>
     <tr>
-            <td>Daire Tipi</td>
-            <td>Fiyatı</td>
-            <td>m2 Ölçümü</td>
-            <td>Kullanım Amacı</td>  
+            <th>Daire Tipi</th>
+            <th>Fiyatı</th>
+            <th>m2 Ölçümü</th>
+            <th>Kullanım Amacı</th>  
         </tr>
         <tr>
             <td>1+0</td>
@@ -71,10 +71,12 @@ Bu tip içerisinde m2 ve ödemesi gereken aidat bilgileri gibi detay bilgiler de
 
 ## Projede Kullanılan Paketler
 
-Mssql Express Edition
-Sql.Data
-Dapper,
-AutoMapper
+<ul>
+ 	<li>Mssql Express Edition</li>
+ 	<li>Sql.Data</li>
+ 	<li>Dapper</li>
+    <li>AutoMapper</li>
+</ul>
 
 ## Proje İlerleme Bilgileri
 
